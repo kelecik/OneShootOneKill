@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class SoldierDeterminationAI : MonoBehaviour
 {
-    [SerializeField]
-    Collider[] nearstObjectContainer;
+    [HideInInspector]
+    public Collider[] nearstObjectContainer;
     [SerializeField]
     LayerMask nearsObjectLayer;
-
-
     private void Update()
     {
         Determination();

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class SoldierAttackAI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    float fireFrequency;
+    void Attack()
     {
-        
+        if(Soldier.instance.soldierState == SoldierState.ATTACK)
+        {
+            
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FireFrequency()
     {
-        
+
     }
 }

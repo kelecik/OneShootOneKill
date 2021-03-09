@@ -132,8 +132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 143449117}
   - component: {fileID: 143449119}
-  - component: {fileID: 143449118}
   - component: {fileID: 143449120}
+  - component: {fileID: 143449118}
   - component: {fileID: 143449125}
   - component: {fileID: 143449124}
   - component: {fileID: 143449123}
@@ -173,8 +173,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eaa092fdf3171a47b25291e4466faea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soldierState: 0
   soldierMovement: {fileID: 0}
-  soldierAttackAI: {fileID: 0}
+  soldierAttackAI: {fileID: 143449124}
+  soldierAnimation: {fileID: 143449125}
+  soldierDeterminationAI: {fileID: 143449123}
 --- !u!195 &143449119
 NavMeshAgent:
   m_ObjectHideFlags: 0
