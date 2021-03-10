@@ -6,5 +6,6 @@ public enum SoldierState
 {
     NONE,
     WALK,
-    ATTACK
+    ATTACK,
+    DIE
 }

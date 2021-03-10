@@ -4,28 +4,31 @@ using UnityEngine;
 public class Soldier : MonoBehaviour
 {
     public static Soldier instance;
-    [HideInInspector]
     public SoldierState soldierState = SoldierState.NONE;
-
     public SoldierMovementAI soldierMovement;
     public SoldierAttackAI soldierAttackAI;
     public SoldierAnimation soldierAnimation;
     public SoldierDeterminationAI soldierDeterminationAI;
-
+    //------SOLDİER STATUS---------//
+    public bool health;
+    private void Awake() { instance = this; }
     private void Update()
     {
         DecideState();
     }
-
     void DecideState() // to decide SoldierState
     {
-        if(soldierDeterminationAI.nearstObjectContainer.Length > 0)
+        if(soldierDeterminationAI.nearstObjectContainer.Length > 0 && !health)
         {
             soldierState = SoldierState.ATTACK;
         }
-        else
+        else if (soldierDeterminationAI.nearstObjectContainer.Length == 0  && !health)
         {
-            soldierState = SoldierState.NONE;
+            soldierState = SoldierState.WALK;
+        }
+        else if (health)
+        {
+            soldierState = SoldierState.DIE;
         }
     }
 }

@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class SoldierAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator playerAnim;
+    private void Start()
     {
-        
+        playerAnim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        PlayerAnimation();
+    }
+
+    void PlayerAnimation()
+    {
+        switch (Soldier.instance.soldierState)
+        {
+            case SoldierState.ATTACK:
+                playerAnim.SetBool("Moving", false);
+                playerAnim.SetBool("Firing", true);
+                playerAnim.SetBool("Die", Soldier.instance.health);
+                break;
+            case SoldierState.WALK:
+                playerAnim.SetBool("Moving", true);
+                playerAnim.SetBool("Firing", false);
+                playerAnim.SetBool("Die", Soldier.instance.health);
+                break;
+            case SoldierState.DIE:
+                playerAnim.SetBool("Moving", false);
+                playerAnim.SetBool("Firing", false);
+                playerAnim.SetBool("Die", Soldier.instance.health);
+                break;
+        }
     }
 }
