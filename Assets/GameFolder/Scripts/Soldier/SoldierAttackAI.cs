@@ -5,9 +5,20 @@ using UnityEngine;
 public class SoldierAttackAI : MonoBehaviour
 {
     float fireFrequency;
+<<<<<<< Updated upstream
+=======
+    float time;
+    [SerializeField]
+    GameObject prefabs, firePos;
+    private Soldier soldier;
+    private void Update()
+    {
+        Attack();
+    }
+>>>>>>> Stashed changes
     void Attack()
     {
-        if(Soldier.instance.soldierState == SoldierState.ATTACK)
+        if(soldier.soldierState == SoldierState.ATTACK)
         {
             
         }
