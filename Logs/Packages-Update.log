@@ -44,10 +44,18 @@ The following packages were added:
   com.unity.timeline@1.2.17
   com.unity.ugui@1.0.0
 
+<<<<<<< Updated upstream
 === Thu Mar 11 11:28:08 2021
+=======
+=== Thu Mar 11 11:21:59 2021
+>>>>>>> Stashed changes
 
 Packages were changed.
 Update Mode: updateDependencies
 
 The following packages were updated:
   com.unity.test-framework from version 1.1.19 to 1.1.22
+<<<<<<< Updated upstream
+=======
+  com.unity.timeline from version 1.2.17 to 1.2.18
+>>>>>>> Stashed changes
