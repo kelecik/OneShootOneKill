@@ -24,7 +24,7 @@ public class PlayerAnimationController : MonoBehaviour
     {
         transform.LookAt(transform.position + Direction);
         //print("animate it");
-        //TODO:animasyonlar
+
     }
 
     internal void ChangeAnimation(AnimationState Currentstate)
