@@ -8,10 +8,10 @@ public class PlayerAnimasyonController : MonoBehaviour
 {
     Animator PlayerAnimator;
 
-    readonly int Idle = Animator.StringToHash("Idle");
-    readonly int Run = Animator.StringToHash("Run");
-    readonly int Died = Animator.StringToHash("Died");
-    readonly int Heailng = Animator.StringToHash("Heal");
+    private readonly int Died = Animator.StringToHash("Died");
+    private readonly int Idle = Animator.StringToHash("Idle");
+    private readonly int Run = Animator.StringToHash("Run");
+    private readonly int Heailng = Animator.StringToHash("Heal");
 
     int LastStateId = Animator.StringToHash("Idle");
     private void Start()
@@ -55,9 +55,9 @@ public class PlayerAnimasyonController : MonoBehaviour
 
             case AnimationState.Dead:
                 print("öl");
-                PlayerAnimator.SetBool(Died, true);
+                PlayerAnimator.SetTrigger(Died);
                 PlayerAnimator.SetBool(LastStateId, false);
-                LastStateId = Died;
+
                 break;
 
             case AnimationState.Healing:

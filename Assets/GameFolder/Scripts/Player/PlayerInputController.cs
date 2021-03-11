@@ -15,7 +15,7 @@ public class PlayerInputController : MonoBehaviour
     public class StopEvent : UnityEvent<AnimationState> { }
 
     public StopEvent AnimateIt;
-    private const bool alwaysTrue = true;
+
     private void FixedUpdate()
     {
         TakeInput();

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Soliter
   - MedKit
+  - Bullet
   layers:
   - Default
   - TransparentFX
