@@ -19,7 +19,7 @@ public class PlayerInputController : MonoBehaviour
     private void FixedUpdate()
     {
         TakeInput();
-        
+
     }
     public void TakeInput()
     {
@@ -33,17 +33,19 @@ public class PlayerInputController : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            EndPos = StartPos = Vector3.zero;
-            AnimateIt?.Invoke(AnimationState.Idle);
-            
-        }
+
         if (Mathf.Abs((StartPos - EndPos).magnitude) > 2f)
         {
             Vector3 InputDirection = new Vector3((EndPos.x - StartPos.x), 0, (EndPos.y - StartPos.y));
             MoveIt?.Invoke(InputDirection.normalized);
             AnimateIt?.Invoke(AnimationState.Running);
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            EndPos = StartPos = Vector3.zero;
+
+            AnimateIt?.Invoke(AnimationState.Idle);
+
         }
 
     }

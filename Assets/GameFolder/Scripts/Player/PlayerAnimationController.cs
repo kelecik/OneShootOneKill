@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class PlayerAnimasyonController : MonoBehaviour
+public class PlayerAnimationController : MonoBehaviour
 {
     Animator PlayerAnimator;
 
@@ -36,6 +36,7 @@ public class PlayerAnimasyonController : MonoBehaviour
                 break;
 
             case AnimationState.Idle:
+
                 print("Idle");
                 PlayerAnimator.SetBool(Idle, true);
                 if (LastStateId == Idle) break;
@@ -63,6 +64,7 @@ public class PlayerAnimasyonController : MonoBehaviour
             case AnimationState.Healing:
                 PlayerAnimator.SetBool(Heailng, true);
                 print("Yaşat");
+                if (LastStateId == Heailng) break;
                 PlayerAnimator.SetBool(LastStateId, false);
                 LastStateId = Heailng;
                 break;
@@ -75,5 +77,10 @@ public class PlayerAnimasyonController : MonoBehaviour
 
         //print("AnimationStop");
         //TODO:animasyonstop
+    }
+
+    internal void CloseWalkAnimation()
+    {
+        //PlayerAnimator.SetBool(, true);
     }
 }

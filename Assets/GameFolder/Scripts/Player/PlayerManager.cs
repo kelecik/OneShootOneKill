@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(PlayerInputController), typeof(PlayerAnimasyonController), typeof(PlayerMoveController))] //scripts
+[RequireComponent(typeof(PlayerInputController), typeof(PlayerAnimationController), typeof(PlayerMoveController))] //scripts
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]  //physics
 [RequireComponent(typeof(PlayerCollisionController))]  //physics
 public class PlayerManager : MonoBehaviour
 {
     private PlayerInputController InputController;
     private PlayerMoveController MoveController;
-    private PlayerAnimasyonController AnimationController;
+    private PlayerAnimationController AnimationController;
     private PlayerCollisionController CollisionDetection;
 
 
@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour
         #region GetCompanents
         InputController = gameObject.GetComponent<PlayerInputController>();
         MoveController = gameObject.GetComponent<PlayerMoveController>();
-        AnimationController = gameObject.GetComponent<PlayerAnimasyonController>();
+        AnimationController = gameObject.GetComponent<PlayerAnimationController>();
         CollisionDetection = gameObject.GetComponent<PlayerCollisionController>();
 
         #endregion
@@ -53,10 +53,4 @@ public class PlayerManager : MonoBehaviour
     {
         MoveController.enabled = false;
     }
-
-    private void Update()
-    {
-
-    }
-
 }
