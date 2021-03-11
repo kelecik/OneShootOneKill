@@ -15,7 +15,7 @@ public class PlayerMoveController : MonoBehaviour
     }
     internal void MoveIt(Vector3 Direction)
     {
-        rb.velocity = Direction * MovementSpeed;
-
+        //rb.MovePosition(gameObject.transform.position + Direction * MovementSpeed * Time.fixedDeltaTime);
+        gameObject.transform.Translate(Direction * MovementSpeed * Time.fixedDeltaTime, Space.World);
     }
 }
