@@ -20,7 +20,7 @@ public class PlayerAnimasyonController : MonoBehaviour
     }
 
 
-    internal void AnimateIt(Vector3 Direction)
+    internal void RotateIt(Vector3 Direction)
     {
         transform.LookAt(transform.position + Direction);
         //print("animate it");
@@ -34,6 +34,7 @@ public class PlayerAnimasyonController : MonoBehaviour
             case AnimationState.None:
                 Debug.LogError("something wrong");
                 break;
+
             case AnimationState.Idle:
                 print("Idle");
                 PlayerAnimator.SetBool(Idle, true);
@@ -41,26 +42,31 @@ public class PlayerAnimasyonController : MonoBehaviour
                 PlayerAnimator.SetBool(LastStateId, false);
                 LastStateId = Idle;
                 break;
+
             case AnimationState.Running:
 
-                PlayerAnimator.SetBool(Run, true);
                 print("koş");
+                PlayerAnimator.SetBool(Run, true);
                 if (LastStateId == Run) break;
+
                 PlayerAnimator.SetBool(LastStateId, false);
                 LastStateId = Run;
                 break;
+
             case AnimationState.Dead:
-                PlayerAnimator.SetBool(Died, true);
                 print("öl");
+                PlayerAnimator.SetBool(Died, true);
                 PlayerAnimator.SetBool(LastStateId, false);
                 LastStateId = Died;
                 break;
+
             case AnimationState.Healing:
                 PlayerAnimator.SetBool(Heailng, true);
                 print("Yaşat");
                 PlayerAnimator.SetBool(LastStateId, false);
                 LastStateId = Heailng;
                 break;
+
             default:
                 break;
         }

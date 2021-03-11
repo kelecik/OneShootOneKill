@@ -385,7 +385,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14904
+  m_Name: pb_Mesh15764
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -990,7 +990,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.31980115, y: -0.00080734445, z: 0.00027250024, w: 0.9474843}
+  m_LocalRotation: {x: 0.31980115, y: -0.00080734846, z: 0.0002725016, w: 0.9474843}
   m_LocalPosition: {x: -37.6, y: 31.6, z: -64.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11653,7 +11653,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078334926}
-  m_LocalRotation: {x: 0.31980115, y: -0.00080734445, z: 0.00027250024, w: 0.9474843}
+  m_LocalRotation: {x: 0.31980115, y: -0.00080734846, z: 0.0002725016, w: 0.9474843}
   m_LocalPosition: {x: -37.6, y: 31.6, z: -64.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11814,7 +11814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f29bc1cb9d9bcd478842763988796f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 5
+  MovementSpeed: 15
 --- !u!54 &919132149227403204
 Rigidbody:
   m_ObjectHideFlags: 0

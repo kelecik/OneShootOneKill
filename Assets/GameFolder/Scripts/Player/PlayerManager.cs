@@ -25,7 +25,7 @@ public class PlayerManager : MonoBehaviour
         #endregion
 
         InputController.MoveIt.AddListener(MoveController.MoveIt);
-        InputController.MoveIt.AddListener(AnimationController.AnimateIt);
+        InputController.MoveIt.AddListener(AnimationController.RotateIt);
         InputController.AnimateIt.AddListener(AnimationController.ChangeAnimation);
     }
     private void Update()
