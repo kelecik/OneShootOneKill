@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerInputController), typeof(PlayerAnimasyonController), typeof(PlayerMoveController))] //scripts
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]  //physics
-[RequireComponent(typeof(PlayerCollisionDetection), typeof(BoxCollider))]  //physics
+[RequireComponent(typeof(PlayerCollisionDetection))]  //physics
 public class PlayerManager : MonoBehaviour
 {
     private PlayerInputController InputController;
@@ -26,7 +26,7 @@ public class PlayerManager : MonoBehaviour
 
         InputController.MoveIt.AddListener(MoveController.MoveIt);
         InputController.MoveIt.AddListener(AnimationController.AnimateIt);
-
+        InputController.AnimateIt.AddListener(AnimationController.ChangeAnimation);
     }
     private void Update()
     {

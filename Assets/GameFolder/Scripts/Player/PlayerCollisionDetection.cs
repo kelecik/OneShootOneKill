@@ -19,7 +19,8 @@ public class PlayerCollisionDetection : MonoBehaviour
             {
 
                 print(other.gameObject.tag);
-                //TODO: velocity=0
+                
+                //TODO: if idleda ise heal it
             }
         }
     }
