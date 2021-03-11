@@ -5,8 +5,10 @@ using UnityEngine;
 public class SoldierAnimation : MonoBehaviour
 {
     private Animator playerAnim;
+    private Soldier soldier;
     private void Start()
     {
+        soldier = GetComponent<Soldier>();
         playerAnim = GetComponent<Animator>();
     }
 
@@ -17,22 +19,22 @@ public class SoldierAnimation : MonoBehaviour
 
     void PlayerAnimation()
     {
-        switch (Soldier.instance.soldierState)
+        switch (soldier.soldierState)
         {
             case SoldierState.ATTACK:
                 playerAnim.SetBool("Moving", false);
                 playerAnim.SetBool("Firing", true);
-                playerAnim.SetBool("Die", Soldier.instance.health);
+                playerAnim.SetBool("Die", soldier.isDeath);
                 break;
             case SoldierState.WALK:
                 playerAnim.SetBool("Moving", true);
                 playerAnim.SetBool("Firing", false);
-                playerAnim.SetBool("Die", Soldier.instance.health);
+                playerAnim.SetBool("Die", soldier.isDeath);
                 break;
             case SoldierState.DIE:
                 playerAnim.SetBool("Moving", false);
                 playerAnim.SetBool("Firing", false);
-                playerAnim.SetBool("Die", Soldier.instance.health);
+                playerAnim.SetBool("Die", soldier.isDeath);
                 break;
         }
     }

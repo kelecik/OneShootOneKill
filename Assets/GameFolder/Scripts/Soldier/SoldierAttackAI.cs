@@ -9,6 +9,12 @@ public class SoldierAttackAI : MonoBehaviour
     float time;
     [SerializeField]
     GameObject prefabs, firePos;
+    private Soldier soldier;
+
+    private void Start()
+    {
+        soldier = GetComponent<Soldier>();
+    }
     private void Update()
     {
         Attack();
@@ -16,7 +22,7 @@ public class SoldierAttackAI : MonoBehaviour
 
     void Attack()
     {
-        if(Soldier.instance.soldierState == SoldierState.ATTACK)
+        if(soldier.soldierState == SoldierState.ATTACK)
         {
             time -= Time.deltaTime;
             if (time < 0)

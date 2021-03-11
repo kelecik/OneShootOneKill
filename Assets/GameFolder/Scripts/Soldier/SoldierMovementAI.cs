@@ -2,31 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.AI;
 
 public class SoldierMovementAI : MonoBehaviour 
 {
     [SerializeField]
     Transform pos;
+    [SerializeField]
+    List<GameObject> trenchList = new List<GameObject>();
+    private Transform target;
+    private Soldier soldier;
+    float time;
+    [SerializeField]
+    float patrolFrequency;
+    private int trench;
+    private NavMeshAgent nvms;
+
+    private void Start()
+    {
+        soldier = GetComponent<Soldier>();
+        nvms = GetComponent<NavMeshAgent>();
+    }
     private void Update()
     {
         NPCDirection();
+        NPCMovementFrequency();        
     }
     void NPCDirection()
     {
-        if (Soldier.instance.soldierState == SoldierState.ATTACK)
+        if (soldier.soldierState == SoldierState.ATTACK)
         {
             transform.LookAt(Soldier.instance.soldierDeterminationAI.nearstObjectContainer[0].transform.position, Vector3.up);
-            Debug.Log("bakıyorum şuan");
         }
+    }
 
-        if(Soldier.instance.soldierState == SoldierState.WALK)
+    void NPCMovementFrequency()
+    {
+        if (!soldier.isDeath && soldier.soldierState == SoldierState.WALK)
         {
-            transform.LookAt(pos.position, Vector3.up);
-            transform.DOLocalMove(pos.position, 15);
+            time -= Time.deltaTime;
+            if(time < 0)
+            {
+                trench = Random.Range(0, trenchList.Count);
+                Transform targetPos = trenchList[trench].transform;
+                target = targetPos;
+                time = patrolFrequency;
+            }           
         }
-        else
+        if (soldier.isDeath)
         {
-            DOTween.Kill(transform);
+            nvms.isStopped = true;
+        }
+        else if (!soldier.isDeath && soldier.soldierState != SoldierState.ATTACK)
+        {
+            nvms.isStopped = false;
+            nvms.destination = target.position;
         }
     }
 }

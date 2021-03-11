@@ -7,6 +7,7 @@ public class PlayerMovementController : MonoBehaviour
     private Transform hedef;
     public bool ısAlive = true;
     private int siper;
+
     private void Start()
     {
         siper = Random.Range(0, siperler.Count);

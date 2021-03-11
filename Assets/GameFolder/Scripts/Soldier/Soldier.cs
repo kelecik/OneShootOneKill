@@ -10,7 +10,7 @@ public class Soldier : MonoBehaviour
     public SoldierAnimation soldierAnimation;
     public SoldierDeterminationAI soldierDeterminationAI;
     //------SOLDİER STATUS---------//
-    public bool health;
+    public bool isDeath;
     private void Awake() { instance = this; }
     private void Update()
     {
@@ -18,15 +18,15 @@ public class Soldier : MonoBehaviour
     }
     void DecideState() // to decide SoldierState
     {
-        if(soldierDeterminationAI.nearstObjectContainer.Length > 0 && !health)
+        if(soldierDeterminationAI.nearstObjectContainer.Length > 0 && !isDeath)
         {
             soldierState = SoldierState.ATTACK;
         }
-        else if (soldierDeterminationAI.nearstObjectContainer.Length == 0  && !health)
+        else if (soldierDeterminationAI.nearstObjectContainer.Length == 0 && !isDeath)
         {
             soldierState = SoldierState.WALK;
         }
-        else if (health)
+        else if (isDeath)
         {
             soldierState = SoldierState.DIE;
         }
