@@ -7,8 +7,6 @@ using UnityEngine.AI;
 public class SoldierMovementAI : MonoBehaviour 
 {
     [SerializeField]
-    Transform pos;
-    [SerializeField]
     List<GameObject> trenchList = new List<GameObject>();
     private Transform target;
     private Soldier soldier;
@@ -16,12 +14,12 @@ public class SoldierMovementAI : MonoBehaviour
     [SerializeField]
     float patrolFrequency;
     private int trench;
-    private NavMeshAgent nvms;
+    private NavMeshAgent navmeshAgent;
 
     private void Start()
     {
         soldier = GetComponent<Soldier>();
-        nvms = GetComponent<NavMeshAgent>();
+        navmeshAgent = GetComponent<NavMeshAgent>();
     }
     private void Update()
     {
@@ -51,12 +49,12 @@ public class SoldierMovementAI : MonoBehaviour
         }
         if (soldier.isDeath)
         {
-            nvms.isStopped = true;
+            navmeshAgent.isStopped = true;
         }
         else if (!soldier.isDeath && soldier.soldierState != SoldierState.ATTACK)
         {
-            nvms.isStopped = false;
-            nvms.destination = target.position;
+            navmeshAgent.isStopped = false;
+            navmeshAgent.destination = target.position;
         }
     }
 }
