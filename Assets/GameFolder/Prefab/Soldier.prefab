@@ -931,9 +931,10 @@ GameObject:
   - component: {fileID: 7260115996035229318}
   - component: {fileID: 9188315333916631680}
   - component: {fileID: 2784737057488512605}
+  - component: {fileID: 1807988476}
   m_Layer: 0
   m_Name: Soldier
-  m_TagString: Untagged
+  m_TagString: Soliter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -967,7 +968,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 8d83bc8a4f458ea40acf1e368ea54918, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -990,7 +991,10 @@ MonoBehaviour:
   soldierAttackAI: {fileID: 4572350129725576704}
   soldierAnimation: {fileID: 9095415927990242}
   soldierDeterminationAI: {fileID: 3828668071710138338}
-  isDeath: 0
+  Respawn:
+    m_PersistentCalls:
+      m_Calls: []
+  isDeath: 1
 --- !u!114 &9095415927990242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,6 +1092,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1807988476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7033289758160717255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.12, y: 14.7, z: 11.75}
+  m_Center: {x: -0.27057648, y: 5.5343437, z: -0.2077961}
 --- !u!1 &7088431103080523420
 GameObject:
   m_ObjectHideFlags: 0

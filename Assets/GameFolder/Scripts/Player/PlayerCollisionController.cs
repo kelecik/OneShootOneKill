@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerCollisionController : MonoBehaviour
 {
-    private int medkit = 2;
+    private int medkit = 0;
     PlayerAnimationController animationController;
+    float time = 2;
     private void Start()
     {
         animationController = GetComponent<PlayerAnimationController>();
@@ -15,8 +16,8 @@ public class PlayerCollisionController : MonoBehaviour
         {
             if (other.gameObject.CompareTag("MedKit"))
             {
-                print("medkit");
                 medkit++;
+                print("medkit=" + medkit);
                 Destroy(other.gameObject);//destroymedkit
                                           //collecing medkit ++
                                           //playerprefs kullanılabilir
@@ -26,12 +27,17 @@ public class PlayerCollisionController : MonoBehaviour
             {
                 //TODO: if idleda ise heal it
 
-                medkit--;
+
                 //other.dirilt
 
+                //if (time < 0)
+                //{
+                //    GameObject bullet = Instantiate(prefabs, firePos.transform.position, transform.rotation);
+                //    Rigidbody rbBullet = bullet.GetComponent<Rigidbody>();
+                //    rbBullet.velocity = transform.TransformDirection(0, 0, 40);
+                //    time = fireFrequency;
+                //}
 
-                print(other.gameObject.tag);
-                animationController.ChangeAnimation(AnimationState.Healing);
 
             }
 
@@ -42,13 +48,22 @@ public class PlayerCollisionController : MonoBehaviour
             }
         }
     }
+
+
+
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Soliter"))
+        if (other.gameObject.CompareTag("Soliter") && other.GetComponent<Soldier>().isDeath && medkit > 0)
         {
             //TODO: if idleda ise heal it
 
-
+            time -= Time.deltaTime;
+            if (time < 0)
+            {
+                other.GetComponent<Soldier>().Respawn?.Invoke();
+                medkit--;
+                //Debug.LogWarning(medkit + "Medkit");
+            }
             //other.dirilt
 
 
@@ -68,9 +83,9 @@ public class PlayerCollisionController : MonoBehaviour
 
             //other.dirilt
 
-
+            time = 2;
             print(other.gameObject.tag);
-            animationController.ChangeAnimation(AnimationState.Running);
+            animationController.ChangeAnimation(AnimationState.Idle);
 
         }
     }

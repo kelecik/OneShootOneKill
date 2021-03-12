@@ -192,7 +192,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Healanim
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 758728069876610783}
@@ -206,7 +206,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: edf384df076ce244583f4c6a77793faa, type: 2}
+  m_Motion: {fileID: 7400000, guid: b5131933b751ac34eae605ad9e25bd9a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
