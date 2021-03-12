@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class BulletControll : MonoBehaviour
 {
-    public LayerMask layerMask;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == layerMask)
+        if (other.gameObject.layer == 9 || other.gameObject.layer == 10)
         {
-            other.gameObject.GetComponent<Soldier>().health -= 20;
-            Debug.Log("ben girdim ");
+            other.gameObject.GetComponent<Soldier>().health -= 25;  
         }
     }
 }

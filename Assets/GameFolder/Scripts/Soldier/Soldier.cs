@@ -41,6 +41,7 @@ public class Soldier : MonoBehaviour
     private void RespawnValidator()
     {
         isDeath = false;
+        health = 100;
     }
 
     private void RespawnState()
@@ -71,7 +72,7 @@ public class Soldier : MonoBehaviour
 
     void HealthStatus()
     {
-        if(health < 0)
+        if(health < 1)
         {
             isDeath = true;
         }

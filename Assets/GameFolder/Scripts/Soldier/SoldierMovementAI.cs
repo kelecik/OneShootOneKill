@@ -33,7 +33,7 @@ public class SoldierMovementAI : MonoBehaviour
         if (soldier.soldierState == SoldierState.ATTACK)
         {
             transform.LookAt(soldierDeterminationAI.nearstObjectContainer[0].transform.position, Vector3.up);
-            Debug.Log(gameObject.name);
+            //Debug.Log(gameObject.name);
         }
     }
 
