@@ -16,12 +16,10 @@ public class Soldier : MonoBehaviour
     {
         get; private set;
     }
-
     public UnityEvent Respawn;
-
-    //------SOLDİER STATUS---------//
     public bool isDeath;
     private void Awake() { instance = this; }
+    public int health = 100;
 
     private void Start()
     {
@@ -53,6 +51,7 @@ public class Soldier : MonoBehaviour
     private void Update()
     {
         DecideState();
+        HealthStatus();
     }
     void DecideState() // to decide SoldierState
     {
@@ -67,6 +66,14 @@ public class Soldier : MonoBehaviour
         else if (isDeath)
         {
             soldierState = SoldierState.DIE;
+        }
+    }
+
+    void HealthStatus()
+    {
+        if(health < 0)
+        {
+            isDeath = true;
         }
     }
 }

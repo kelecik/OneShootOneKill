@@ -10,6 +10,7 @@ public class SoldierMovementAI : MonoBehaviour
     List<GameObject> trenchList = new List<GameObject>();
     private Transform target;
     private Soldier soldier;
+    private SoldierDeterminationAI soldierDeterminationAI;
     float time;
     [SerializeField]
     float patrolFrequency;
@@ -18,6 +19,7 @@ public class SoldierMovementAI : MonoBehaviour
 
     private void Start()
     {
+        soldierDeterminationAI = GetComponent<SoldierDeterminationAI>();
         soldier = GetComponent<Soldier>();
         navmeshAgent = GetComponent<NavMeshAgent>();
     }
@@ -30,7 +32,8 @@ public class SoldierMovementAI : MonoBehaviour
     {
         if (soldier.soldierState == SoldierState.ATTACK)
         {
-            transform.LookAt(Soldier.instance.soldierDeterminationAI.nearstObjectContainer[0].transform.position, Vector3.up);
+            transform.LookAt(soldierDeterminationAI.nearstObjectContainer[0].transform.position, Vector3.up);
+            Debug.Log(gameObject.name);
         }
     }
 
@@ -55,6 +58,10 @@ public class SoldierMovementAI : MonoBehaviour
         {
             navmeshAgent.isStopped = false;
             navmeshAgent.destination = target.position;
+        }
+        else if(soldier.soldierState == SoldierState.ATTACK)
+        {
+            navmeshAgent.isStopped = true;
         }
     }
 }

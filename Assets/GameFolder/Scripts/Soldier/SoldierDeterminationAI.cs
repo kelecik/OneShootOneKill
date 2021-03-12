@@ -14,6 +14,6 @@ public class SoldierDeterminationAI : MonoBehaviour
     }
     void Determination()
     {
-        nearstObjectContainer = Physics.OverlapSphere(transform.position,10,nearsObjectLayer,QueryTriggerInteraction.UseGlobal);
+        nearstObjectContainer = Physics.OverlapSphere(transform.position,5,nearsObjectLayer,QueryTriggerInteraction.UseGlobal);
     }
 }
