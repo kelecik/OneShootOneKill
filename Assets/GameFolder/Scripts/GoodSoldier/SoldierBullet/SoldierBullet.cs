@@ -5,15 +5,13 @@ using UnityEngine;
 public class SoldierBullet : MonoBehaviour
 {
     public LayerMask layer;
-    private void Update()
-    {
-        Collider[] myObject = Physics.OverlapSphere(transform.position, 3, layer, QueryTriggerInteraction.UseGlobal);
 
-        if(myObject.Length > 0)
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer ==10)
         {
-            myObject[0].GetComponent<BadSoldier>().health -= 25;
+            other.gameObject.GetComponent<BadSoldier>().health -= 25;
             Destroy(gameObject);
-            myObject = null;
-        }        
+        }
     }
 }

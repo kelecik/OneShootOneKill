@@ -7,7 +7,6 @@ public class BadSoldierDeterminationAI : MonoBehaviour
     public Collider[] nearstObjectContainer;
     [SerializeField]
     LayerMask nearsObjectLayer;
-    [HideInInspector]
     public bool isNearObjectDeath;
     private BadSoldier badSoldier;
 
@@ -32,9 +31,8 @@ public class BadSoldierDeterminationAI : MonoBehaviour
             if (nearstObjectContainer[0].GetComponent<SoldierLifeStatus>().isDeath)
             {
                 isNearObjectDeath = true;
-                badSoldier.BadSoldierState = SoldierState.WALK;
             }
-            else
+            else if (!nearstObjectContainer[0].GetComponent<SoldierLifeStatus>().isDeath)
             {
                 isNearObjectDeath = false;
             }

@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: -2789953112392967733}
   - component: {fileID: -7830643553222955119}
   - component: {fileID: -5160552236601342108}
-  m_Layer: 0
+  - component: {fileID: 7766566346203255912}
+  m_Layer: 12
   m_Name: FriendBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -220,3 +221,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7766566346203255912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101551666384276007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.01, z: 0.019884173}
+  m_Center: {x: 2.3283064e-10, y: 0.000003412948, z: 0.000110079534}

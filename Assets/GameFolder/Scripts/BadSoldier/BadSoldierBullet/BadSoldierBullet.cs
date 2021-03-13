@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class BadSoldierBullet : MonoBehaviour
 {
-    public LayerMask layer;
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        Collider[] myObject = Physics.OverlapSphere(transform.position, 3, layer, QueryTriggerInteraction.UseGlobal);
-
-        if (myObject.Length > 0)
+       
+        if (other.gameObject.layer == 9)
         {
-            myObject[0].GetComponent<SoldierLifeStatus>().health -= 25;
+            other.gameObject.GetComponent<SoldierLifeStatus>().health -= 25;
+            Debug.Log("geldi");
             Destroy(gameObject);
         }
     }

@@ -963,6 +963,7 @@ GameObject:
   - component: {fileID: 1908069598958161518}
   - component: {fileID: 3285229096410011555}
   - component: {fileID: 6765644593718918341}
+  - component: {fileID: 9139772650225004482}
   m_Layer: 10
   m_Name: EnemySoldier
   m_TagString: Soliter
@@ -1069,7 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe9163d1c8d00f4fb5e293e43f730ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BadSoldierState: 0
+  BadSoldierState: 1
   isDeath: 0
   health: 100
 --- !u!114 &4863185152014814716
@@ -1084,9 +1085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2b31502a30b204e88df6e459a5470f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireFrequency: 0
-  prefabs: {fileID: 0}
-  firePos: {fileID: 0}
+  fireFrequency: 2
+  prefabs: {fileID: 2101551666384276007, guid: d159a0572a8205c4d9019c692076d4f5, type: 3}
+  firePos: {fileID: 6878115915633101471}
 --- !u!114 &2219683758542497836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,7 +1115,8 @@ MonoBehaviour:
   nearstObjectContainer: []
   nearsObjectLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
+  isNearObjectDeath: 0
 --- !u!114 &3285229096410011555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,8 +1129,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d214d095d2d844d855d76494193994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trenchList: []
-  patrolFrequency: 0
+  trenchList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  patrolFrequency: 3
 --- !u!114 &6765644593718918341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,6 +1147,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c330901614f37243b39749324278f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9139772650225004482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7033289758160717255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12d1694b4c76c64b8ab762b92132587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7088431103080523420
