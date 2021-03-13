@@ -37,7 +37,6 @@ public class PlayerAnimationController : MonoBehaviour
 
             case AnimationState.Idle:
 
-                print("Idle");
                 PlayerAnimator.SetBool(Idle, true);
                 if (LastStateId == Idle) break;
                 PlayerAnimator.SetBool(LastStateId, false);
@@ -46,7 +45,6 @@ public class PlayerAnimationController : MonoBehaviour
 
             case AnimationState.Running:
 
-                print("koş");
                 PlayerAnimator.SetBool(Run, true);
                 if (LastStateId == Run) break;
 

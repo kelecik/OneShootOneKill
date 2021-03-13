@@ -36,8 +36,9 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         UpdateMedic.AddListener(UpdateMedKitCount);
-        ChangeUI.AddListener(ChangeAnim);
         UpdateProcess.AddListener(UpdatePlayerProcess);
+
+        ChangeUI.AddListener(ChangeAnim);
     }
 
     private void UpdatePlayerProcess(int Count)

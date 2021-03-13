@@ -7,6 +7,10 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PlayerInputController), typeof(PlayerAnimationController), typeof(PlayerMoveController))] //scripts
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]  //physics
 [RequireComponent(typeof(PlayerCollisionController))]  //physics
+[RequireComponent(typeof(PlayerInventoryController))]  //Inventory
+
+
+
 public class PlayerManager : MonoBehaviour
 {
     private PlayerInputController InputController;

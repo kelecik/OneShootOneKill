@@ -932,6 +932,8 @@ GameObject:
   - component: {fileID: 9188315333916631680}
   - component: {fileID: 2784737057488512605}
   - component: {fileID: 1807988476}
+  - component: {fileID: 958453027791666935}
+  - component: {fileID: 302637467237626724}
   m_Layer: 9
   m_Name: Soldier
   m_TagString: Soliter
@@ -991,6 +993,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isDeath: 0
+  health: 100
 --- !u!114 &9095415927990242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireFrequency: 2
-  prefabs: {fileID: 1945461380762720036, guid: ece50e8e7230d7940afc21ebd054515a, type: 3}
+  prefabs: {fileID: 2101551666384276007, guid: 354ce9740d88977489f7c1599d7d4f7c, type: 3}
   firePos: {fileID: 7088431103080523420}
 --- !u!114 &3828668071710138338
 MonoBehaviour:
@@ -1101,6 +1104,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.12, y: 14.7, z: 11.75}
   m_Center: {x: -0.27057648, y: 5.5343437, z: -0.2077961}
+--- !u!65 &958453027791666935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7033289758160717255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &302637467237626724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7033289758160717255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 8.760472, y: 1.8007778, z: 11.750001}
+  m_Center: {x: -1.090812, y: -0.9152678, z: -0.2077961}
 --- !u!1 &7088431103080523420
 GameObject:
   m_ObjectHideFlags: 0
