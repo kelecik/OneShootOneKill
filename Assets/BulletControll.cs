@@ -11,6 +11,6 @@ public class BulletControll : MonoBehaviour
             other.gameObject.GetComponent<Soldier>().health -= 25;
             Destroy(gameObject);
         }
-
+       
     }
 }
