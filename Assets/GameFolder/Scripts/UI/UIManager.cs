@@ -4,11 +4,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
+
+    public Text MedkitCount;
+    public Text SoliterCount;
+
+    public Animator animator;
+
+    [System.Serializable]
+    public class UpdateProcess : UnityEvent<int> { }
+
+    public UpdateProcess UpdateSoldier;
+
+    [System.Serializable]
+    public class UpdateMedicEvent : UnityEvent<int> { }
+
+    public UpdateMedicEvent UpdateMedic;
+
+    public UnityEvent<UIState> ChangeUI;
 
     private void Awake()
     {
@@ -21,27 +37,20 @@ public class UIManager : MonoBehaviour
         {
             Destroy(this);
         }
-    }//Singleton
 
-    public static UnityEvent<int> UpdateMedic;
-    public static UnityEvent<UIState> ChangeUI;
 
-    private TextMeshProUGUI MedkitCount;
-    private TextMeshProUGUI SoliterCount;
 
-    public Animator animator;
+        //ChangeUI.AddListener(ChangeAnim);
 
-    public static UnityEvent<int> UpdateProcess;
+    }//Singleton Events
 
-    void Start()
+    private void Start()
     {
         UpdateMedic.AddListener(UpdateMedKitCount);
-        UpdateProcess.AddListener(UpdatePlayerProcess);
-
-        ChangeUI.AddListener(ChangeAnim);
+        UpdateSoldier.AddListener(UpdatePlayerProcess);
     }
 
-    private void UpdatePlayerProcess(int Count)
+    public void UpdatePlayerProcess(int Count)
     {
         SoliterCount.text = ("X " + Count).ToString();
     }

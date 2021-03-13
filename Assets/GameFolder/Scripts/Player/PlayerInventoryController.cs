@@ -13,14 +13,13 @@ public class PlayerInventoryController : MonoBehaviour
     public void MedkitCollected()
     {
         Medkit++;
-        UIManager.UpdateMedic?.Invoke(Medkit);//TODO:ShowMedkitinUI
-        print(Medkit + "Updated");
+        UIManager.instance.UpdateMedic?.Invoke(Medkit);//TODO:ShowMedkitinUI
 
     }
     public void UseMedkit()
     {
         Medkit--;
-        UIManager.UpdateMedic?.Invoke(Medkit);//TODO:ShowMedkitinUI
+        UIManager.instance.UpdateMedic?.Invoke(Medkit);//TODO:ShowMedkitinUI
         print(Medkit + "Updated");
 
     }

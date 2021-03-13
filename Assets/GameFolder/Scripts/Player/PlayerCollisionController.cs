@@ -19,10 +19,12 @@ public class PlayerCollisionController : MonoBehaviour
         {
             if (other.gameObject.CompareTag("MedKit"))
             {
-                inventory.MedkitCollected();
+                inventory.MedkitCollected();//collecing medkit ++
                 Destroy(other.gameObject);//destroymedkit
-                                          //collecing medkit ++
-                                          //playerprefs kullanılabilir
+
+
+
+
 
             }
             if (other.gameObject.CompareTag("Bullet"))//TODO: add particule
