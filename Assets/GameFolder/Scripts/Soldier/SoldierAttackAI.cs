@@ -10,7 +10,6 @@ public class SoldierAttackAI : MonoBehaviour
     [SerializeField]
     GameObject prefabs, firePos;
     private Soldier soldier;
-
     private void Start()
     {
         soldier = GetComponent<Soldier>();

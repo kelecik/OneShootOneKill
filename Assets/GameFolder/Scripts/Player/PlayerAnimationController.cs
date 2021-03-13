@@ -44,7 +44,8 @@ public class PlayerAnimationController : MonoBehaviour
                 break;
 
             case AnimationState.Running:
-
+               
+                print("Running");
                 PlayerAnimator.SetBool(Run, true);
                 if (LastStateId == Run) break;
 

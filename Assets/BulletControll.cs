@@ -8,7 +8,9 @@ public class BulletControll : MonoBehaviour
     {
         if (other.gameObject.layer == 9 || other.gameObject.layer == 10)
         {
-            other.gameObject.GetComponent<Soldier>().health -= 25;  
+            other.gameObject.GetComponent<Soldier>().health -= 25;
+            Destroy(gameObject);
         }
+
     }
 }
