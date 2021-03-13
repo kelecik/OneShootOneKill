@@ -1470,6 +1470,12 @@ MonoBehaviour:
   MedkitCount: {fileID: 1867979068}
   SoliterCount: {fileID: 250255336}
   animator: {fileID: 1414296517}
+  UpdateSoldier:
+    m_PersistentCalls:
+      m_Calls: []
+  UpdateMedic:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1414296517
 Animator:
   serializedVersion: 3
@@ -2367,7 +2373,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: x 2
 --- !u!222 &1867979069
 CanvasRenderer:
   m_ObjectHideFlags: 0
