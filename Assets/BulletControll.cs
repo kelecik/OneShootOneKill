@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletControll : MonoBehaviour
 {
+<<<<<<< Updated upstream
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 9 || other.gameObject.layer == 10)
@@ -13,4 +14,7 @@ public class BulletControll : MonoBehaviour
         }
        
     }
+=======
+   
+>>>>>>> Stashed changes
 }

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierAnimation : MonoBehaviour
+public class BadSoldierAnim : MonoBehaviour
 {
     private Animator playerAnim;
-    private Soldier soldier;
+    private BadSoldier badSoldier;
     private void Start()
     {
-        soldier = GetComponent<Soldier>();
+        badSoldier = GetComponent<BadSoldier>();
         playerAnim = GetComponent<Animator>();
     }
 
@@ -19,22 +19,22 @@ public class SoldierAnimation : MonoBehaviour
 
     void PlayerAnimation()
     {
-        switch (soldier.soldierState)
+        switch (badSoldier.BadSoldierState)
         {
             case SoldierState.ATTACK:
                 playerAnim.SetBool("Moving", false);
                 playerAnim.SetBool("Firing", true);
-                playerAnim.SetBool("Die", soldier.isDeath);
+                playerAnim.SetBool("Die", badSoldier.isDeath);
                 break;
             case SoldierState.WALK:
                 playerAnim.SetBool("Moving", true);
                 playerAnim.SetBool("Firing", false);
-                playerAnim.SetBool("Die", soldier.isDeath);
+                playerAnim.SetBool("Die", badSoldier.isDeath);
                 break;
             case SoldierState.DIE:
                 playerAnim.SetBool("Moving", false);
                 playerAnim.SetBool("Firing", false);
-                playerAnim.SetBool("Die", soldier.isDeath);
+                playerAnim.SetBool("Die", badSoldier.isDeath);
                 break;
         }
     }

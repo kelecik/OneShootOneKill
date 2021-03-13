@@ -39,7 +39,7 @@ public class PlayerCollisionController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.layer == 9 && other.GetComponent<Soldier>().isDeath && inventory.Medkit > 0)//soldier
+        if (other.gameObject.layer == 9 && other.GetComponent<SoldierLifeStatus>().isDeath && inventory.Medkit > 0)//soldier
         {
             //TODO: if idleda ise heal it
             print("Healing...");
@@ -48,7 +48,7 @@ public class PlayerCollisionController : MonoBehaviour
             if (time < 0)
             {
                 print("HEAL İTT");
-                other.GetComponent<Soldier>().Respawn?.Invoke();
+                other.GetComponent<SoldierLifeStatus>().Respawn?.Invoke();
                 inventory.UseMedkit();
                 //Debug.LogWarning(medkit + "Medkit");
             }

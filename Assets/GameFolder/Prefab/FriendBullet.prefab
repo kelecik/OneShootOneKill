@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2435951668908023608}
   - component: {fileID: 444390074450750450}
   - component: {fileID: -2789953112392967733}
-  - component: {fileID: -8362077893002230485}
-  - component: {fileID: 8826548726468783883}
-  - component: {fileID: 3043693086463254804}
+  - component: {fileID: -7830643553222955119}
+  - component: {fileID: -5160552236601342108}
   m_Layer: 0
   m_Name: FriendBullet
   m_TagString: Bullet
@@ -190,7 +189,22 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!54 &-8362077893002230485
+--- !u!114 &-7830643553222955119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101551666384276007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5030681952c906d46a8445b93b9cc7f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!54 &-5160552236601342108
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,29 +220,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8826548726468783883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101551666384276007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e28ed35b8fb66df4b84cc83d02c4b3e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!136 &3043693086463254804
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101551666384276007}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.009942086
-  m_Height: 0.019884173
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.000003412366, z: 0.00011007935}

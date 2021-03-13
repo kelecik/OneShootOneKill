@@ -6,7 +6,7 @@ public class SoldierVisulation : MonoBehaviour
 {
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 5);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 10);
     }
 }
