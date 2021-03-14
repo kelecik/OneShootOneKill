@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 6108712228077641549}
   - component: {fileID: 4274174200117894675}
   m_Layer: 0
-  m_Name: cephe (3)
+  m_Name: cephe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -814,9 +814,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6885249339503363575}
-  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: -0.45663452, y: -8.380045, z: -5}
-  m_LocalScale: {x: 0.20000002, y: 0.2, z: 0.20000002}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 6969082885799805992}
   - {fileID: 7775388563826417931}
@@ -843,8 +843,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4.050187, z: 9.532283}
-  m_Center: {x: -0.0000070119545, y: 1.5250933, z: 0.74387246}
+  m_Size: {x: 2.0268047, y: 4.050187, z: 9.532283}
+  m_Center: {x: 0.513396, y: 1.5250933, z: 0.74387246}
 --- !u!1 &8173411815432908866
 GameObject:
   m_ObjectHideFlags: 0
