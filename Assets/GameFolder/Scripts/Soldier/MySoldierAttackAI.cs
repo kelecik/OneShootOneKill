@@ -30,6 +30,7 @@ public class MySoldierAttackAI : MonoBehaviour
                 Rigidbody rbBullet = bullet.GetComponent<Rigidbody>();
                 rbBullet.velocity = transform.TransformDirection(0, 0, 40);
                 time = fireFrequency;
+                SoundManager.PlaySound("fireSound");
             }
         }
     }
