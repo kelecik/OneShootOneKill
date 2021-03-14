@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MySoldierAnimation : MonoBehaviour
+public class SoldierAnimation : MonoBehaviour
 {
     private Animator playerAnim;
-    private MySoldierLifeStatus mySoldierLifeStatus;
-    private MySoldier mySoldier;
+    private SoldierLifeStatus mySoldierLifeStatus;
+    private Soldier mySoldier;
     private void Start()
     {
-        mySoldierLifeStatus = GetComponent<MySoldierLifeStatus>();
-        mySoldier = GetComponent<MySoldier>();
+        mySoldierLifeStatus = GetComponent<SoldierLifeStatus>();
+        mySoldier = GetComponent<Soldier>();
         playerAnim = GetComponent<Animator>();
     }
 

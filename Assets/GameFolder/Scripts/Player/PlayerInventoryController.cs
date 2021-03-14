@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInventoryController : MonoBehaviour
 {
     public int Medkit = 2;
-    public int SoldierHealedCount = 0;
+    public int SoldierHealCount = 0;
 
     /// <summary>
     /// MedkitCollected SoldierHealed
@@ -20,9 +20,9 @@ public class PlayerInventoryController : MonoBehaviour
     public void UseMedkit()
     {
         Medkit--;
-        SoldierHealedCount++;
+        SoldierHealCount++;
         UIManager.instance.UpdateMedic?.Invoke(Medkit);//TODO:ShowMedkitinUI
-        UIManager.instance.UpdateSoldier?.Invoke(SoldierHealedCount);
+        UIManager.instance.UpdateSoldier?.Invoke(SoldierHealCount);
 
 
         print(Medkit + "Updated");

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2435951668908023608}
   - component: {fileID: 444390074450750450}
   - component: {fileID: -2789953112392967733}
-  - component: {fileID: 5955087859067900978}
   - component: {fileID: 8658629244140020649}
   - component: {fileID: -7258789711101205142}
+  - component: {fileID: 3682949933307279996}
   m_Layer: 12
   m_Name: EnemyBullet
   m_TagString: Bullet
@@ -190,18 +190,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &5955087859067900978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101551666384276007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a755a500bf81194989c95444ef0abb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &8658629244140020649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -231,3 +219,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01, z: 0.05}
   m_Center: {x: 2.3283064e-10, y: 0.000003412948, z: 0.000110079534}
+--- !u!114 &3682949933307279996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101551666384276007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558850bfdef2d3548bef31556dde4946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerCount: 9

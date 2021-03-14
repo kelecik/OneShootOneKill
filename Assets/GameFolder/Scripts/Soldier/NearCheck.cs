@@ -25,7 +25,7 @@ public class NearCheck : MonoBehaviour
     {
         if (Enemy != null)
         {
-            isOtherAlive = Enemy.GetComponent<MySoldierLifeStatus>().isAlive;
+            isOtherAlive = Enemy.GetComponent<SoldierLifeStatus>().isAlive;
         }
         if (!isOtherAlive)
         {

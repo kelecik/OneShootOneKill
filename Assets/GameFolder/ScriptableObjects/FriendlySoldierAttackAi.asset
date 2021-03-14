@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8c3baf2805f337409b062df29bdb624, type: 3}
-  m_Name: EnemySoldier
+  m_Script: {fileID: 11500000, guid: 548250ef78060fa44b171e6fa078a850, type: 3}
+  m_Name: FriendlySoldierAttackAi
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 0}
-  FireFriquency: 0
-  TrencList: []
-  LayerCount: 0
+  fireFrequency: 2
+  bulletPrefab: {fileID: 2101551666384276007, guid: 354ce9740d88977489f7c1599d7d4f7c,
+    type: 3}

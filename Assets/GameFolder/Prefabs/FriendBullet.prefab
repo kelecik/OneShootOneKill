@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2435951668908023608}
   - component: {fileID: 444390074450750450}
   - component: {fileID: -2789953112392967733}
-  - component: {fileID: -7830643553222955119}
   - component: {fileID: -5160552236601342108}
   - component: {fileID: 7766566346203255912}
+  - component: {fileID: 5303094642525872679}
   m_Layer: 12
   m_Name: FriendBullet
   m_TagString: Bullet
@@ -190,21 +190,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &-7830643553222955119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101551666384276007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5030681952c906d46a8445b93b9cc7f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer:
-    serializedVersion: 2
-    m_Bits: 1024
 --- !u!54 &-5160552236601342108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -234,3 +219,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01, z: 0.019884173}
   m_Center: {x: 2.3283064e-10, y: 0.000003412948, z: 0.000110079534}
+--- !u!114 &5303094642525872679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101551666384276007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558850bfdef2d3548bef31556dde4946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerCount: 10

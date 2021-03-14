@@ -9,7 +9,7 @@ public class MyBulletController : MonoBehaviour
     {
         if(other.gameObject.layer == layerCount)
         {
-            other.gameObject.GetComponent<MySoldierLifeStatus>().health -= 25;
+            other.gameObject.GetComponent<SoldierLifeStatus>().health -= 25;
             Destroy(gameObject, 0.2f);
         }
     }

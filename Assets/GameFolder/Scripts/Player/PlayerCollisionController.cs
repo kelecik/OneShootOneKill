@@ -30,12 +30,12 @@ public class PlayerCollisionController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.layer == 9 && !other.GetComponent<MySoldierLifeStatus>().isAlive && inventory.Medkit > 0)//soldier
+        if (other.gameObject.layer == 9 && !other.GetComponent<SoldierLifeStatus>().isAlive && inventory.Medkit > 0)//soldier
         {
             time -= Time.deltaTime;
             if (time < 0)
             {
-                other.GetComponent<MySoldierLifeStatus>().health = 100;
+                other.GetComponent<SoldierLifeStatus>().health = 100;
                 inventory.UseMedkit();
             }
             animationController.ChangeAnimation(AnimationState.Healing);

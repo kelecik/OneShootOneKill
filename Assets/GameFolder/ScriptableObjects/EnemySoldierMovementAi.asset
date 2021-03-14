@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea3216a3c92cde43bb0898084f9f346, type: 3}
+  m_Name: EnemySoldierMovementAi
+  m_EditorClassIdentifier: 
+  TrenchList:
+  - {fileID: 7088328523262217222, guid: 6f58ad740b082734ba46f13e553ae164, type: 3}
+  - {fileID: 4508024516924079313, guid: ce1a246bc5c6ae44bb6541c5fc0a2aaf, type: 3}
+  - {fileID: 5325044329572516430, guid: 1e10b7fa15cf5934e8abcb2464c7339e, type: 3}
+  - {fileID: 3298204178848815165, guid: 4c00439a0e8622647bef3ec1e0c91421, type: 3}
+  - {fileID: 367147896257490061, guid: da549b1b08ec38c488a6b874594c503c, type: 3}
+  - {fileID: 571031591717350002, guid: a71b5c0f874a8ff48b52a28f12aa0115, type: 3}
+  - {fileID: 3958369240328964678, guid: 4cc30a1a0ef07274394474b3e5782bd9, type: 3}
+  - {fileID: 2512351600551101186, guid: 44fb57176f093ff4eb62fd53e2c1335e, type: 3}
+  trenchCount: 1
+  walkFrequency: 8

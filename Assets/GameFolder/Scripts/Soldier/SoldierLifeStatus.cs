@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MySoldierLifeStatus : MonoBehaviour
+public class SoldierLifeStatus : MonoBehaviour
 {
     public int health;
     public bool isAlive;

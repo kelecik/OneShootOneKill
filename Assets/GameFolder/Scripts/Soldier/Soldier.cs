@@ -9,16 +9,16 @@ public enum GoodSoldierState
     DİE
 }
 
-public class MySoldier : MonoBehaviour
+public class Soldier : MonoBehaviour
 {
     public GoodSoldierState goodSoldierState = GoodSoldierState.WALK;
     private NearCheck nearCheck;
-    private MySoldierLifeStatus mySoldierLifeStatus;
+    private SoldierLifeStatus mySoldierLifeStatus;
 
     private void Start()
     {
         nearCheck = GetComponent<NearCheck>();
-        mySoldierLifeStatus = GetComponent<MySoldierLifeStatus>();
+        mySoldierLifeStatus = GetComponent<SoldierLifeStatus>();
     }
 
     private void Update()

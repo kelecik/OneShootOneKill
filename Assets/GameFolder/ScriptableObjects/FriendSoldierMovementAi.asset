@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea3216a3c92cde43bb0898084f9f346, type: 3}
+  m_Name: FriendSoldierMovementAi
+  m_EditorClassIdentifier: 
+  TrenchList:
+  - {fileID: 2990570438079819956, guid: 876609975a136774f8fee93604b11479, type: 3}
+  - {fileID: 8296822609750267080, guid: 15fbe3cffd1ad4343b36f1a5b57df3e6, type: 3}
+  - {fileID: 9161910564527328033, guid: 67c6370b911490e49a8075595b5cf826, type: 3}
+  - {fileID: 7915818029302967914, guid: 93148dd93009ee04c895383b9f7f9c73, type: 3}
+  - {fileID: 1690336667150207140, guid: 6373ae8ac9a20fa428d2062ef4c3320f, type: 3}
+  - {fileID: 1945556343047817425, guid: 2c53f7e6c6f80d847984b48bc54de8ce, type: 3}
+  - {fileID: 6190840357632567919, guid: e29bee47982128d4e82af51cbd9e6a65, type: 3}
+  - {fileID: 5821669259671676487, guid: 68ed9627440a75044a0b3e219b94eca8, type: 3}
+  trenchCount: 1
+  walkFrequency: 10

@@ -39,6 +39,11 @@ public class PlayerManager : MonoBehaviour
         OnGameover.AddListener(InactiveMovementController);
         OnGameover.AddListener(InactiveAnimationController);
         OnGameover.AddListener(InactiveInputController);
+        OnGameover.AddListener(UIManager.instance.ShowGameOverUI);
+
+
+
+
     }
 
     private void InactiveInputController()

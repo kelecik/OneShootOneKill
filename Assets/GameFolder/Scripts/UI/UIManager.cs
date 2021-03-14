@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -38,11 +39,7 @@ public class UIManager : MonoBehaviour
             Destroy(this);
         }
 
-
-
-        //ChangeUI.AddListener(ChangeAnim);
-
-    }//Singleton Events
+    }//Singleton
 
     private void Start()
     {
@@ -50,10 +47,26 @@ public class UIManager : MonoBehaviour
         UpdateSoldier.AddListener(UpdatePlayerProcess);
     }
 
-    public void UpdatePlayerProcess(int Count)
+    public void UpdatePlayerProcess(int count)
     {
-        print("X " + Count);
-        SoliterCount.text = ("X " + Count).ToString();
+        
+        if (count >= 10)
+        {
+            ChangeAnim(1);
+
+        }
+        else
+        {
+            SoliterCount.text = ("X " + (Convert.ToInt32(SoliterCount.text.Split(' ')[1]) - 1)).ToString();
+        }
+    }
+    public void LevelLoad()//UI EVENT
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void ShowGameOverUI()
+    {
+        animator.SetTrigger("Fail");
     }
 
 
@@ -75,14 +88,14 @@ public class UIManager : MonoBehaviour
                 animator.SetTrigger("Fail");
                 break;
             default:
-                Application.Quit();//application quit
+                Application.Quit();
                 break;
         }
     }
 
     private void UpdateMedKitCount(int count)
     {
-        MedkitCount.text = ("x " + count).ToString();
+        MedkitCount.text = ( count+"X " ).ToString();
     }
 
 }

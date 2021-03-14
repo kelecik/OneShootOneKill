@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MySoldierMovementAI : MonoBehaviour
+public class SoldierMovementAI : MonoBehaviour
 {
-    [SerializeField]
-    List<Transform> trenchList = new List<Transform>();
-    int trenchCount;
-    float time;
-    [SerializeField]
-    float timeFrequency;
-    Transform currentTarget;
+
+    [SerializeField] private SoldierMovementAISettings soldierInfoAsset;
+
+
+    private float time;
+    private Transform currentTarget;
+
     [Space]
     [Header("Components")]
-    private MySoldier mySoldier;
+    private Soldier soldier;
     private NearCheck nearCheck;
     private NavMeshAgent navmesh;
 
-
     private void Start()
     {
-        mySoldier = GetComponent<MySoldier>();
+        soldier = GetComponent<Soldier>();
         nearCheck = GetComponent<NearCheck>();
         navmesh = GetComponent<NavMeshAgent>();
     }
@@ -33,31 +32,31 @@ public class MySoldierMovementAI : MonoBehaviour
     }
     void SoldierDirection()
     {
-        if(mySoldier.goodSoldierState == GoodSoldierState.ATTACK)
+        if (soldier.goodSoldierState == GoodSoldierState.ATTACK)
         {
-            if(nearCheck.Enemy != null)
+            if (nearCheck.Enemy != null)
             {
                 transform.LookAt(nearCheck.Enemy.transform.position, Vector3.up);
-            }     
+            }
         }
     }
 
     void SoldierMovement()
     {
-        if(mySoldier.goodSoldierState == GoodSoldierState.WALK)
+        if (soldier.goodSoldierState == GoodSoldierState.WALK)
         {
             time -= Time.deltaTime;
-            if(time < 0)
+            if (time < 0)
             {
-                trenchCount = Random.Range(0, trenchList.Count);
-                Transform target = trenchList[trenchCount].transform;
+                soldierInfoAsset.trenchCount = Random.Range(0, soldierInfoAsset.TrenchList.Count);
+                Transform target = soldierInfoAsset.TrenchList[soldierInfoAsset.trenchCount].transform;
                 currentTarget = target;
-                time = timeFrequency;
+                time = soldierInfoAsset.walkFrequency;
             }
             navmesh.destination = currentTarget.position;
         }
-        
-        if(mySoldier.goodSoldierState != GoodSoldierState.WALK)
+
+        if (soldier.goodSoldierState != GoodSoldierState.WALK)
         {
             navmesh.isStopped = true;
         }
