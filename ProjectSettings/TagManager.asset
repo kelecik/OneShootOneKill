@@ -17,8 +17,8 @@ TagManager:
   - 
   - 
   - Ground
-  - Friends
-  - Enemy
+  - GoodSoldier
+  - EnemySoldier
   - Player
   - Bullet
   - 

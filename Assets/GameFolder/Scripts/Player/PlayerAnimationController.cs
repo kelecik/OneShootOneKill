@@ -18,15 +18,12 @@ public class PlayerAnimationController : MonoBehaviour
     {
         PlayerAnimator = gameObject.GetComponent<Animator>();
     }
-
-
     internal void RotateIt(Vector3 Direction)
     {
         transform.LookAt(transform.position + Direction);
         //print("animate it");
 
     }
-
     internal void ChangeAnimation(AnimationState Currentstate)
     {
         switch (Currentstate)
@@ -71,9 +68,6 @@ public class PlayerAnimationController : MonoBehaviour
             default:
                 break;
         }
-
-
-
         //print("AnimationStop");
         //TODO:animasyonstop
     }

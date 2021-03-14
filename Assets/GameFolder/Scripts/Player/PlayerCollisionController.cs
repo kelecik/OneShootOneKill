@@ -12,7 +12,6 @@ public class PlayerCollisionController : MonoBehaviour
     {
         animationController = GetComponent<PlayerAnimationController>();
         inventory = GetComponent<PlayerInventoryController>();
-
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -21,60 +20,33 @@ public class PlayerCollisionController : MonoBehaviour
             {
                 inventory.MedkitCollected();//collecing medkit ++
                 Destroy(other.gameObject);//destroymedkit
-
-
-
-
-
             }
-            if (other.gameObject.CompareTag("Bullet"))//TODO: add particule
+            if (other.gameObject.CompareTag("Bullet"))
             {
                 Destroy(other.gameObject);
-                gameObject.GetComponent<PlayerManager>().OnGameover?.Invoke(); //game over
+                gameObject.GetComponent<PlayerManager>().OnGameover?.Invoke();
             }
         }
     }
-
-
-
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.layer == 9 && other.GetComponent<SoldierLifeStatus>().isDeath && inventory.Medkit > 0)//soldier
+        if (other.gameObject.layer == 9 && !other.GetComponent<MySoldierLifeStatus>().isAlive && inventory.Medkit > 0)//soldier
         {
-            //TODO: if idleda ise heal it
-            print("Healing...");
-
             time -= Time.deltaTime;
             if (time < 0)
             {
-                print("HEAL İTT");
-                other.GetComponent<SoldierLifeStatus>().Respawn?.Invoke();
+                other.GetComponent<MySoldierLifeStatus>().health = 100;
                 inventory.UseMedkit();
-                //Debug.LogWarning(medkit + "Medkit");
             }
-            //other.dirilt
-
-
-            print(other.gameObject.tag);
             animationController.ChangeAnimation(AnimationState.Healing);
-            //animationController.CloseWalkAnimation();
-
         }
-
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == 9)//soldier
+        if (other.gameObject.layer == 9)
         {
-            //TODO: if idleda ise heal it
-
-
-            //other.dirilt
-
             time = 2;
             animationController.ChangeAnimation(AnimationState.Idle);
-
         }
     }
-
 }
