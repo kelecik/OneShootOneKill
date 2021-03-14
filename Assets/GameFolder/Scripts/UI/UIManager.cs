@@ -52,6 +52,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdatePlayerProcess(int Count)
     {
+        print("X " + Count);
         SoliterCount.text = ("X " + Count).ToString();
     }
 

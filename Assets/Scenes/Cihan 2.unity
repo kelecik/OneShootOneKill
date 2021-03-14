@@ -9440,6 +9440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Medkit: 2
+  SoldierHealedCount: 0
 --- !u!114 &3992532712270500432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11618,6 +11619,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8802650189923905205, guid: baf35a9937eff9e4d858f0a59fe4162d,
+        type: 3}
+      propertyPath: m_Text
+      value: X 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802650189923905210, guid: baf35a9937eff9e4d858f0a59fe4162d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802650190766222830, guid: baf35a9937eff9e4d858f0a59fe4162d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802650190899306400, guid: baf35a9937eff9e4d858f0a59fe4162d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8802650190903675550, guid: baf35a9937eff9e4d858f0a59fe4162d,
         type: 3}
       propertyPath: m_Pivot.x
