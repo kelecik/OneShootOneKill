@@ -57,23 +57,24 @@ public class UIManager : MonoBehaviour
 
 
     /// <summary>
-    /// UI State Degisir ->
+    /// UI State Degisir  Start->0 Win ->1 Fail->2
     /// </summary>
     /// <param name="state"></param>
-    private void ChangeAnim(UIState state)
+    public void ChangeAnim(int index)//Starting Event Dont Clear it
     {
-        switch (state)
+        switch (index)
         {
-            case UIState.Start:
+            case (int)UIState.Start:
                 animator.SetTrigger("Start");
                 break;
-            case UIState.Win:
+            case (int)UIState.Win:
                 animator.SetTrigger("Win");
                 break;
-            case UIState.Fail:
+            case (int)UIState.Fail:
                 animator.SetTrigger("Fail");
                 break;
             default:
+                Application.Quit();//application quit
                 break;
         }
     }
