@@ -71,7 +71,7 @@ public class UIManager : MonoBehaviour
 
 
     /// <summary>
-    /// UI State Degisir  Start->0 Win ->1 Fail->2
+    /// UI State Degisir  Start->0 Win ->1 Fail->2 PassStoryBoard->3
     /// </summary>
     /// <param name="state"></param>
     public void ChangeAnim(int index)//Starting Event Dont Clear it
@@ -86,6 +86,9 @@ public class UIManager : MonoBehaviour
                 break;
             case (int)UIState.Fail:
                 animator.SetTrigger("Fail");
+                break;
+            case (int)UIState.StoryBoard:
+                animator.SetTrigger("StoryPass");
                 break;
             default:
                 Application.Quit();

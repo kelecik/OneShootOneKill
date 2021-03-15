@@ -6,5 +6,6 @@ public enum UIState
 {
     Start,
     Win,
-    Fail
+    Fail,
+    StoryBoard
 }
